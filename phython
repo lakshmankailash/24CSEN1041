@@ -1,0 +1,34 @@
+import math
+
+number = 25
+square_root = math.sqrt(number)
+print(f"The square root of {number} is {square_root}")
+
+# Output: The square root of 25 is 5.0
+
+
+
+
+
+num = float(input("Enter number: "))
+
+a = int(num)          # integer part
+b = num - a           # decimal part
+
+# Integer to binary
+bin_int = ""
+while a > 0:
+    r = a % 2
+    bin_int = str(r) + bin_int
+    a = a // 2
+
+# Decimal to binary
+bin_dec = ""
+i = 0
+while b > 0 and i < 5:
+    b = b * 2
+    bin_dec = bin_dec + str(int(b))
+    b = b - int(b)
+    i = i + 1
+
+print(bin_int + "." + bin_dec)
